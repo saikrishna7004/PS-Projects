@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS Assignment</title>
+</head>
+
+<body>
+    <div style="margin: 10px;">
+        <div class="row">
+            <div style="color: red;" class="res" id="redRes">0</div>
+            <div style="color: goldenrod;" class="res" id="yellowRes">0</div>
+            <div style="color: mediumseagreen;" class="res" id="mediumseagreenRes">0</div>
+            <div style="color: darkturquoise;" class="res" id="darkturquoiseRes">0</div>
+        </div>
+        <div class="row">
+            <button style="background-color: darkturquoise;" class="btn">2</button>
+            <button style="background-color: yellow;" class="btn">4</button>
+            <button style="background-color: darkturquoise;" class="btn">2</button>
+            <button style="background-color: yellow;" class="btn">4</button>
+        </div>
+        <div class="row">
+            <button style="background-color: red;" class="btn">6</button>
+            <button style="background-color: mediumseagreen;" class="btn">3</button>
+            <button style="background-color: red;" class="btn">6</button>
+            <button style="background-color: mediumseagreen;" class="btn">3</button>
+        </div>
+        <div class="row">
+            <button style="background-color: darkturquoise;" class="btn">2</button>
+            <button style="background-color: red;" class="btn">6</button>
+            <button style="background-color: darkturquoise;" class="btn">2</button>
+            <button style="background-color: yellow;" class="btn">4</button>
+        </div>
+        <div class="row">
+            <button style="background-color: mediumseagreen;" class="btn">3</button>
+            <button style="background-color: yellow;" class="btn">4</button>
+            <button style="background-color: mediumseagreen;" class="btn">3</button>
+            <button style="background-color: red;" class="btn">6</button>
+        </div>
+        <div class="row">
+            <div class="res">&nbsp;</div>
+            <div class="res">&nbsp;</div>
+            <div class="res">&nbsp;</div>
+            <div style="background-color: darkslategrey; margin-left: 4px; align-self: center; text-align: center; padding: 12px 0px; width: 96px; color: white;" class="res"><span style="padding: 15px 0px;" id="total">0</span></div>
+        </div>
+    </div>
+    <style>
+        * {
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            margin-bottom: 30px;
+            height: auto;
+            text-align: center;
+        }
+
+        .btn {
+            margin-right: 15px;
+            padding: 12px 40px;
+            border: 0.5px solid grey;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .res {
+            margin-right: 15px;
+            padding: 12px 40px;
+            font-size: 24px;
+            width: 15px;
+        }
+    </style>
+
+    <script>
+        let lst = document.querySelectorAll('.btn')
+        for (let i = 0; i < lst.length; i++) {
+            const ele = lst[i];
+            ele.addEventListener('click', (e)=>{
+                const c = e.target.style['background-color']
+                const t = e.target.innerText
+                document.getElementById(c+'Res').innerText = parseInt(document.getElementById(c+'Res').innerText) + 1
+                document.getElementById('total').innerText = parseInt(document.getElementById('total').innerText) + parseInt(t)
+            })
+        }
+    </script>
+</body>
+
+</html>

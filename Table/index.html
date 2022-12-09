@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Changer</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <button class="btn" id="btn" onclick="changeData(event)">Click to See Table</button>
+    </div>
+    <div id="tableDiv">Table should display here</div>
+
+    <style>
+        #tableDiv {
+            margin-top: 20px;
+        }
+        th, td{
+            border: 1px solid;
+            padding: 5px 15px;
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            background-color: cyan;
+        }
+        tbody>tr:hover{
+            background-color: lightgray;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: 0;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px 0 grey;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            box-shadow: 0 5px 10px 0 grey;
+        }
+
+        .btn:active {
+            transform: scale(0.99);
+        }
+
+        .button:hover,
+        .button:focus {
+            opacity: .9;
+        }
+    </style>
+
+    <script>
+        function changeData(e) {
+            if(tableDiv.innerHTML != 'Table should display here'){
+                tableDiv.innerHTML = 'Table should display here'
+                btn.innerHTML = 'Click to Show Table'
+                return
+            }
+            const names = ["Anakin","Obi-Wan","Luke","Leia"];
+            var tData = `<table>
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `
+            names.forEach((e, i) => {
+                tData += `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${e}</td>
+                    </tr>
+                `
+            });
+            tData += `</tbody>
+                </table>
+            `
+            tableDiv.innerHTML = tData
+            btn.innerHTML = 'Click to Hide Table'
+        }
+    </script>
+
+</body>
+
+</html>

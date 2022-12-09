@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <button class="btn" onclick="changeColour()">Click me to Change Colour</button>
+    </div>
+
+    <style>
+        .btn {
+            padding: 10px 20px;
+            border: 0;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px 0 rgb(0 0 0);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            box-shadow: 0 5px 10px 0 rgb(0 0 0);
+        }
+
+        .btn:active {
+            transform: translate(-50%, -50%) scale(0.99);
+        }
+
+        .button:hover,
+        .button:focus {
+            opacity: .9;
+        }
+    </style>
+
+    <script>
+        function changeColour() {
+            let colourCode = "#"
+            const colourRange = "0123456789ABCDEF"
+            for (let i = 0; i < 6; i++) {
+                colourCode += colourRange[Math.floor(Math.random() * 16)];
+            }
+            document.body.style.backgroundColor = colourCode;
+        }
+        changeColour()
+    </script>
+
+</body>
+
+</html>
