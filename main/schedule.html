@@ -54,17 +54,95 @@
                         </ul>
                         <fieldset>
                             <h2>Event Details</h2>
+                            <div class="my-4 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Event Title</label>
+                                    <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="desc" class="form-label">Description</label>
+                                    <textarea class="form-control" id="desc" name="desc" rows="3" placeholder="Description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="desc" class="form-label">Type of Event</label>
+                                    <select class="form-select" aria-label="Type of Event" name="type" id="type">
+                                        <option selected>-- Select --</option>
+                                        <option value="1">General</option>
+                                        <option value="2">Meeting</option>
+                                        <option value="3">Fest</option>
+                                        <option value="4">Workshop</option>
+                                    </select>
+                                </div>
+                            </div>
                             <input type="button" name="next-step" class="mt-4 btn btn-primary next-step" value="Next Step" />
                         </fieldset>
                         <fieldset>
                             <h2>Slot Info</h2>
+                            <div class="my-4 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="date-time" class="form-label">Date and Time</label>
+                                    <input type="datetime-local" class="form-control" id="date-time" name="date-time">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="venue" class="form-label">Event Venue</label>
+                                    <select class="form-select" aria-label="Event Venue" name="venue" id="venue">
+                                        <option selected>-- Select --</option>
+                                        <option value="1">Auditorium</option>
+                                        <option value="2">Mini Auditorium</option>
+                                        <option value="3">Block - E</option>
+                                        <option value="4">Ground</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="crowd" class="form-label">Expected Crowd</label>
+                                    <input type="number" class="form-control" id="crowd" placeholder="No. of People Expected" name="crowd" min="10">
+                                </div>
+                            </div>
                             <input type="button" name="previous-step" class="mt-4 btn btn-primary previous-step" value="Previous Step" />
                             <input type="button" name="next-step" class="mt-4 btn btn-primary next-step" value="Next Step" />
                         </fieldset>
                         <fieldset>
                             <h2>Refreshments</h2>
+                            <div class="my-4 col-lg-6">
+                                <div class="mb-3 d-flex align-items-center justify-content-between">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="item-1" id="item-1">
+                                        <label class="form-check-label" for="item-1">Samosa</label>
+                                    </div>
+                                    <div class="col-sm-auto col-4">
+                                        <input class="form-control" type="number" name="count-1" id="count-1" placeholder="Count" min="0" disabled>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center justify-content-between">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="item-2" id="item-2">
+                                        <label class="form-check-label" for="item-2">Curry Puff</label>
+                                    </div>
+                                    <div class="col-sm-auto col-4">
+                                        <input class="form-control" type="number" name="count-2" id="count-2" placeholder="Count" min="0" disabled>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center justify-content-between">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="item-3" id="item-3">
+                                        <label class="form-check-label" for="item-3">Sprite</label>
+                                    </div>
+                                    <div class="col-sm-auto col-4">
+                                        <input class="form-control" type="number" name="count-3" id="count-3" placeholder="Count" min="0" disabled>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center justify-content-between">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="item-4" id="item-4">
+                                        <label class="form-check-label" for="item-4">ThumbsUp</label>
+                                    </div>
+                                    <div class="col-sm-auto col-4">
+                                        <input class="form-control" type="number" name="count-4" id="count-4" placeholder="Count" min="0" disabled>
+                                    </div>
+                                </div>
+                            </div>
                             <input type="button" name="previous-step" class="mt-4 btn btn-primary previous-step" value="Previous Step" />
-                            <input type="button" name="next-step" class="mt-4 btn btn-primary next-step" value="Final Step" />
+                            <input type="button" name="next-step" class="mt-4 btn btn-primary next-step" value="Preview" />
                         </fieldset>
                         <fieldset>
                             <h2>Review and Submit</h2>
@@ -197,7 +275,21 @@
 				currentStep.style.position = 'relative';
 			})
 		}
-	</script>
+        
+        document.getElementById('item-1').onchange = function() {
+            document.getElementById('count-1').disabled = !this.checked;
+        };
+        document.getElementById('item-2').onchange = function() {
+            document.getElementById('count-2').disabled = !this.checked;
+        };
+        document.getElementById('item-3').onchange = function() {
+            document.getElementById('count-3').disabled = !this.checked;
+        };
+        document.getElementById('item-4').onchange = function() {
+            document.getElementById('count-4').disabled = !this.checked;
+        };
+    
+    </script>
 	<script src="./bootstrap-5.0.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
