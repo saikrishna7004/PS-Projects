@@ -103,42 +103,48 @@
                         </fieldset>
                         <fieldset>
                             <h2>Refreshments</h2>
-                            <div class="my-4 col-lg-6">
-                                <div class="mb-3 d-flex align-items-center justify-content-between">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="item-1" id="item-1">
-                                        <label class="form-check-label" for="item-1">Samosa</label>
+                            <div class="row justify-content-between">
+                                <div class="my-4 col-lg-6">
+                                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="item-1" id="item-1">
+                                            <label class="form-check-label" for="item-1">Samosa</label>
+                                        </div>
+                                        <div class="col-sm-auto col-4">
+                                            <input class="form-control" type="number" name="count-1" id="count-1" placeholder="Count" min="0" disabled>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-auto col-4">
-                                        <input class="form-control" type="number" name="count-1" id="count-1" placeholder="Count" min="0" disabled>
+                                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="item-2" id="item-2">
+                                            <label class="form-check-label" for="item-2">Curry Puff</label>
+                                        </div>
+                                        <div class="col-sm-auto col-4">
+                                            <input class="form-control" type="number" name="count-2" id="count-2" placeholder="Count" min="0" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="item-3" id="item-3">
+                                            <label class="form-check-label" for="item-3">Sprite</label>
+                                        </div>
+                                        <div class="col-sm-auto col-4">
+                                            <input class="form-control" type="number" name="count-3" id="count-3" placeholder="Count" min="0" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 d-flex align-items-center justify-content-between">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="item-4" id="item-4">
+                                            <label class="form-check-label" for="item-4">ThumbsUp</label>
+                                        </div>
+                                        <div class="col-sm-auto col-4">
+                                            <input class="form-control" type="number" name="count-4" id="count-4" placeholder="Count" min="0" disabled>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="mb-3 d-flex align-items-center justify-content-between">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="item-2" id="item-2">
-                                        <label class="form-check-label" for="item-2">Curry Puff</label>
-                                    </div>
-                                    <div class="col-sm-auto col-4">
-                                        <input class="form-control" type="number" name="count-2" id="count-2" placeholder="Count" min="0" disabled>
-                                    </div>
-                                </div>
-                                <div class="mb-3 d-flex align-items-center justify-content-between">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="item-3" id="item-3">
-                                        <label class="form-check-label" for="item-3">Sprite</label>
-                                    </div>
-                                    <div class="col-sm-auto col-4">
-                                        <input class="form-control" type="number" name="count-3" id="count-3" placeholder="Count" min="0" disabled>
-                                    </div>
-                                </div>
-                                <div class="mb-3 d-flex align-items-center justify-content-between">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="item-4" id="item-4">
-                                        <label class="form-check-label" for="item-4">ThumbsUp</label>
-                                    </div>
-                                    <div class="col-sm-auto col-4">
-                                        <input class="form-control" type="number" name="count-4" id="count-4" placeholder="Count" min="0" disabled>
-                                    </div>
+                                <div class="my-3 col-lg-5">
+                                    <label for="notes" class="form-label">Notes</label>
+                                    <textarea class="form-control" id="notes" name="notes" rows="7" placeholder="Notes"></textarea>
                                 </div>
                             </div>
                             <input type="button" name="previous-step" class="mt-4 btn btn-primary previous-step" value="Previous Step" />
