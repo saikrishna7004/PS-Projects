@@ -284,15 +284,19 @@
         
         document.getElementById('item-1').onchange = function() {
             document.getElementById('count-1').disabled = !this.checked;
+            if(!this.checked) document.getElementById('count-1').value=""
         };
         document.getElementById('item-2').onchange = function() {
             document.getElementById('count-2').disabled = !this.checked;
+            if(!this.checked) document.getElementById('count-2').value=""
         };
         document.getElementById('item-3').onchange = function() {
             document.getElementById('count-3').disabled = !this.checked;
+            if(!this.checked) document.getElementById('count-3').value=""
         };
         document.getElementById('item-4').onchange = function() {
             document.getElementById('count-4').disabled = !this.checked;
+            if(!this.checked) document.getElementById('count-4').value=""
         };
     
     </script>
