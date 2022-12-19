@@ -17,4 +17,3 @@ function getData() {
         Swal.fire('Error', 'An error occured while fetching', 'error')
     })
 }
-getData()
