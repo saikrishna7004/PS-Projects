@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    Write  JS code to print the students' first and last names to browser using write() function for the given javascript object.
+
+    students= [{
+         firstname: 'John',
+         last name:’Raffle’,
+         age: 20,
+      },
+      {
+         firstname: 'Mohan',
+         last name:’Dagger’,
+         age: 34
+      }]
+    */
+    let students = [
+        {
+            "firstname": 'John',
+            "last name": 'Raffle',
+            age: 20,
+        },
+        {
+            "firstname": 'Mohan',
+            "last name": 'Dagger',
+            age: 34
+        }
+    ]
+    for (let i = 0; i < students.length; i++) {
+        const e = students[i];
+        document.write(e.firstname+" "+e['last name'], "<br>");
+    }
+</script>
+
+</html>
