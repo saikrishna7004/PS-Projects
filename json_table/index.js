@@ -4,8 +4,8 @@ async function getData() {
 
     let d2 = ``
     data.Employees.forEach(e => {
-        console.log(e)
-        if (e.Salary > 50000 && e.DateOfJoining.substring(3, 5) == 12) {
+        // console.log(e)
+        // if (e.Salary > 50000 && e.DateOfJoining.substring(3, 5) == 12) {
             d2 += `
             <tr>
                 <td>${e.Name}</td>
@@ -13,7 +13,7 @@ async function getData() {
                 <td>${e.Salary}</td>
                 <td>${e.DateOfJoining}</td>
             </tr>`
-        }
+        // }
     });
 
     dataTable.innerHTML = `
@@ -27,4 +27,10 @@ async function getData() {
         </tr>
     </thead>
     <tbody>` + d2 + `</tbody></table>`
+
+    data.Employees.forEach(e => {
+        if (e.Salary > 50000 && e.DateOfJoining.substring(3, 5) == 12) {
+            console.log(e)
+        }
+    });
 }
